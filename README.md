@@ -7,11 +7,12 @@ MVC-style layout:
 - `view/` contains the FXML application shell and JavaFX styles.
 - `controller/` handles navigation, demo sign-in, and video playback.
 
-The bundled catalog contains 24 unique YouTube trailers across three categories
-(eight videos per category). Each shelf shows five cards at a time and scrolls
-horizontally to the remaining trailers. Video playback uses YouTube's embedded
-player with custom play/pause controls. The catalog, demo login, and My List are
-handled locally for the current app session without a cloud backend.
+The bundled catalog contains 58 unique YouTube trailers across seven genres:
+Animation, Action, Drama, Comedy, Horror, Romance, and Science Fiction. Each
+genre has at least eight videos. Each shelf scrolls horizontally through its
+trailers. Video playback uses YouTube's embedded player with custom play/pause
+controls. The catalog, demo login, and My List are handled locally for the
+current app session without a cloud backend.
 
 Demo credentials:
 

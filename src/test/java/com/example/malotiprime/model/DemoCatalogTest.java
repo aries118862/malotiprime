@@ -11,9 +11,9 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class DemoCatalogTest {
     @Test
-    void catalogHasThreeGenresWithEightUniqueVideosEach() {
-        assertTrue(DemoCatalog.genres().size() >= 3);
-        assertTrue(DemoCatalog.videos().size() >= 24);
+    void catalogHasSevenGenresWithAtLeastEightUniqueVideosEach() {
+        assertEquals(7, DemoCatalog.genres().size());
+        assertEquals(58, DemoCatalog.videos().size());
         assertEquals(DemoCatalog.videos().size(),
                 new HashSet<>(DemoCatalog.videos().stream().map(Video::id).toList()).size());
         assertEquals(DemoCatalog.videos().size(),
@@ -27,6 +27,9 @@ class DemoCatalogTest {
                     .count();
             assertTrue(count >= 8, genre + " has fewer than eight videos");
         }
+
+        assertTrue(DemoCatalog.genres().containsAll(
+                Set.of("Comedy", "Horror", "Romance", "Science Fiction")));
     }
 
     @Test
